@@ -1,7 +1,10 @@
 let myLibrary = [];
-let table = document.createElement("table")
-let paragraphLeft = document.createElement("p")
-let paragraphRight = document.createElement("p")
+let wrapper = document.createElement("div")
+document.body.appendChild(wrapper)
+let columnLeft = document.createElement("div")
+let columnRight = document.createElement("div")
+wrapper.appendChild(columnLeft)
+wrapper.appendChild(columnRight)
 
 
 function Book(title, author) {
@@ -9,7 +12,6 @@ function Book(title, author) {
   this.title = title
   this.author = author
   myLibrary.push(this)
-  
 }
 
 function addBookToLibrary() {
@@ -23,19 +25,36 @@ addBookToLibrary()
 const hobbit = new Book(title, author);
 const potter = new Book(title, author)
 
-table.textContent = myLibrary
-document.body.appendChild(table)
 
-paragraphLeft.textContent = myLibrary[1].title
-paragraphRight.textContent = myLibrary[1].author
-document.body.appendChild(paragraphLeft)
-document.body.appendChild(paragraphRight)
+function displayOnPage(){
+
+  for (let i = 0; i < myLibrary.length; i++){
+    let paragraphLeft = document.createElement("p")
+    let paragraphRight = document.createElement("p")
+   
+    paragraphLeft.textContent = myLibrary[i].title
+    paragraphRight.textContent = myLibrary[i].author
+    columnLeft.appendChild(paragraphLeft)
+    columnRight.appendChild(paragraphRight)
+   
+    styleParagraph()
+  }
+
+}
+displayOnPage()
+
 
 
 function getInput(){
   title = prompt('Book title: ')
   author = prompt('Book author: ')
 }
+function styleParagraph(){
+  wrapper.setAttribute("style", "display:flex; ")
+  columnLeft.setAttribute("style", "background-color: rgba(199, 197, 81, 0.8); padding:15px;")
+  columnRight.setAttribute("style", "background-color:rgba(82, 249, 214, 0.8); padding:15px;")
+
+ }
 
 
 //make a constructor with it's title and author
