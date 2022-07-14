@@ -29,21 +29,20 @@ function addBookToLibrary() {
 const potter = new Book(title, author) */
 
 
+
 function displayOnPage(){
+  //title is textContent of input title, author is input author etc
+  //when clicked on submit button
+  let titleForm = document.querySelector(".title")
+  let authorForm = document.querySelector(".author")
+  let pagesForm = document.querySelector(".pages")
+  let readForm = document.querySelector(".read")
 
-  for (let i = 0; i < myLibrary.length; i++){
-    let paragraphLeft = document.createElement("p")
-    let paragraphRight = document.createElement("p")
-   
-    paragraphLeft.textContent = myLibrary[i].title
-    paragraphRight.textContent = myLibrary[i].author
-    columnLeft.appendChild(paragraphLeft)
-    columnRight.appendChild(paragraphRight)
-   
-    styleParagraph()
-  }
+  
 
+  console.log(titleForm);
 }
+displayOnPage()
 //displayOnPage()
 addNewBook()
 
