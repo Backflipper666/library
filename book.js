@@ -76,6 +76,7 @@ function displayOnPage(){
     columnPages.appendChild(pagesParagraph)
     columnRead.appendChild(readParagraph)
     console.log(title);
+    styleParagraph()
   })
   
   
@@ -108,8 +109,10 @@ function getInput(){
 }
 function styleParagraph(){
   wrapper.setAttribute("style", "display:flex; ")
-  columnLeft.setAttribute("style", "background-color: rgba(199, 197, 81, 0.8); padding:15px;")
-  columnRight.setAttribute("style", "background-color:rgba(82, 249, 214, 0.8); padding:15px;")
+  columnTitle.setAttribute("style", "background-color: rgba(199, 197, 81, 0.8); padding:15px; border:1px solid  black;")
+  columnAuthor.setAttribute("style", "background-color:rgba(82, 249, 214, 0.8); padding:15px;border:1px solid  black;")
+  columnPages.setAttribute("style", "background-color:#b874c4; padding:15px;border:1px solid  black;")
+  columnRead.setAttribute("style", "background-color:#52e8ff; padding:15px;border:1px solid  black;")
 
  }
 
