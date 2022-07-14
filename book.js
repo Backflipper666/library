@@ -42,18 +42,11 @@ function displayOnPage(){
   let pagesForm = document.querySelector(".pages")
   let readForm = document.querySelector(".read")
   let submitter = document.querySelector(".submitter")
-  titleForm.addEventListener("input", ()=>{
-    title = titleForm.value
-  })
-  authorForm.addEventListener("input", ()=>{
-    author = authorForm.value
-  })
-  pagesForm.addEventListener("input", ()=>{
-    pages = pagesForm.value
-  })
-  readForm.addEventListener("input", ()=>{
-    read = readForm.value
-  })
+  title = titleForm.value
+  author = authorForm.value
+  pages = pagesForm.value
+  read = readForm.value
+
 
   submitter.addEventListener("click", ()=>{
     //create 4 paragraphs and display Book.values on them
