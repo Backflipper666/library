@@ -1,10 +1,14 @@
 let myLibrary = [];
 let wrapper = document.createElement("div")
 document.body.appendChild(wrapper)
-let columnLeft = document.createElement("div")
-let columnRight = document.createElement("div")
-wrapper.appendChild(columnLeft)
-wrapper.appendChild(columnRight)
+let columnTitle = document.createElement("div")
+let columnAuthor = document.createElement("div")
+let columnPages = document.createElement("div")
+let columnRead = document.createElement("div")
+wrapper.appendChild(columnTitle)
+wrapper.appendChild(columnAuthor)
+wrapper.appendChild(columnPages)
+wrapper.appendChild(columnRead)
 
 
 
@@ -52,6 +56,7 @@ function displayOnPage(){
   })
 
   submitter.addEventListener("click", ()=>{
+    //create 4 paragraphs and display Book.values on them
     console.log(title);
   })
   
