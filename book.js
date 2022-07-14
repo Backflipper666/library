@@ -8,10 +8,12 @@ wrapper.appendChild(columnRight)
 
 
 
-function Book(title, author) {
+function Book(title, author, pages, read) {
   // the constructor...
   this.title = title
   this.author = author
+  this.pages = pages
+  this.read = read
   myLibrary.push(this)
 }
 
@@ -21,10 +23,10 @@ function addBookToLibrary() {
   myLibrary.push()
 
 }
-addBookToLibrary()
+//addBookToLibrary()
 
-const hobbit = new Book(title, author);
-const potter = new Book(title, author)
+/* const hobbit = new Book(title, author);
+const potter = new Book(title, author) */
 
 
 function displayOnPage(){
@@ -42,13 +44,21 @@ function displayOnPage(){
   }
 
 }
-displayOnPage()
+//displayOnPage()
 addNewBook()
 
 function addNewBook(){
   let button = document.createElement("button");
   button.textContent = "NEW BOOK"
   document.body.appendChild(button)
+  showForm()
+  function showForm(){
+    button.addEventListener("click", ()=>{
+      let bookForm = document.querySelector("form.bookForm")
+      bookForm.setAttribute("style", "visibility:visible; display:block;")
+     
+    })
+  }
 }
 
 
