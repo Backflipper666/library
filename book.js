@@ -7,6 +7,7 @@ wrapper.appendChild(columnLeft)
 wrapper.appendChild(columnRight)
 
 
+
 function Book(title, author) {
   // the constructor...
   this.title = title
@@ -42,6 +43,13 @@ function displayOnPage(){
 
 }
 displayOnPage()
+addNewBook()
+
+function addNewBook(){
+  let button = document.createElement("button");
+  button.textContent = "NEW BOOK"
+  document.body.appendChild(button)
+}
 
 
 
