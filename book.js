@@ -28,19 +28,36 @@ function addBookToLibrary() {
 /* const hobbit = new Book(title, author);
 const potter = new Book(title, author) */
 
-
+displayOnPage()
 
 function displayOnPage(){
   //title is textContent of input title, author is input author etc
-  //when clicked on submit button
+  //when clicked on submit button, textContent of inputs are their counterparts
   let titleForm = document.querySelector(".title")
   let authorForm = document.querySelector(".author")
   let pagesForm = document.querySelector(".pages")
   let readForm = document.querySelector(".read")
+  let submitter = document.querySelector(".submitter")
+  titleForm.addEventListener("input", ()=>{
+    title = titleForm.value
+  })
+  authorForm.addEventListener("input", ()=>{
+    author = authorForm.value
+  })
+  pagesForm.addEventListener("input", ()=>{
+    pages = pagesForm.value
+  })
+  readForm.addEventListener("input", ()=>{
+    read = readForm.value
+  })
 
+  submitter.addEventListener("click", ()=>{
+    console.log(title);
+  })
+  
   
 
-  console.log(titleForm);
+  
 }
 displayOnPage()
 //displayOnPage()
@@ -55,6 +72,7 @@ function addNewBook(){
     button.addEventListener("click", ()=>{
       let bookForm = document.querySelector("form.bookForm")
       bookForm.setAttribute("style", "visibility:visible; display:block;")
+ 
      
     })
   }
