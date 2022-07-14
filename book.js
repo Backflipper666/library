@@ -46,7 +46,18 @@ function displayOnPage(){
   author = authorForm.value
   pages = pagesForm.value
   read = readForm.value
-
+  titleForm.addEventListener("input", ()=>{
+    title = titleForm.value
+  })
+  authorForm.addEventListener("input", ()=>{
+    author = authorForm.value
+  })
+  pagesForm.addEventListener("input", ()=>{
+    pages = pagesForm.value
+  })
+  readForm.addEventListener("input", ()=>{
+    read = readForm.value
+  })
 
   submitter.addEventListener("click", ()=>{
     //create 4 paragraphs and display Book.values on them
