@@ -57,6 +57,20 @@ function displayOnPage(){
 
   submitter.addEventListener("click", ()=>{
     //create 4 paragraphs and display Book.values on them
+    let titleParagraph = document.createElement("p")
+    let authorParagraph = document.createElement("p")
+    let pagesParagraph = document.createElement("p")
+    let readParagraph = document.createElement("p")
+
+    titleParagraph.textContent = title
+    authorParagraph.textContent = author
+    pagesParagraph.textContent = pages
+    readParagraph.textContent = read
+
+    columnTitle.appendChild(titleParagraph)
+    columnAuthor.appendChild(authorParagraph)
+    columnPages.appendChild(pagesParagraph)
+    columnRead.appendChild(readParagraph)
     console.log(title);
   })
   
@@ -64,7 +78,6 @@ function displayOnPage(){
 
   
 }
-displayOnPage()
 //displayOnPage()
 addNewBook()
 
